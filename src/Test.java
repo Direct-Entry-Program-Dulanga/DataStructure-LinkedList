@@ -7,5 +7,7 @@ public class Test {
         single.add(30);
         single.print();
         System.out.println("Size: "+single.size());
+        single.clear();
+        System.out.println(single.empty());
     }
 }

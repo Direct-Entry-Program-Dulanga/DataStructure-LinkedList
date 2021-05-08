@@ -61,6 +61,6 @@ public class Singly {
     }
 
     public boolean empty(){
-        return false;
+        return (firstNode == null);
     }
 }
