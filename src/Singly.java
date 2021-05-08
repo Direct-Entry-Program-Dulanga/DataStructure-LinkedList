@@ -19,12 +19,15 @@ public class Singly {
     }
 
     public void add(int index,int number){
-        Node newnode = new Node(number);
+        Node newnode2 = new Node(number);
         if(index > size() || index < 0){
             throw new RuntimeException("Invalid Array exception");
         }
         for (int i = 0; i < size(); i++) {
-
+                if(i == index){
+                    firstNode.next = newnode2;
+                    newnode2.next = lastNode;
+                }
         }
 
     }
