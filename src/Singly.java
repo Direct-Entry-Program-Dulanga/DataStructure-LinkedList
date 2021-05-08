@@ -1,4 +1,7 @@
 public class Singly {
+
+    private Node tail = null;
+
     public  void add(int number){
 
     }
