@@ -1,10 +1,9 @@
 public class Singly {
 
-    private Node tail = null;
+    private Node sentiNode;
 
     public  void add(int number){
-
-
+        Node node = new Node(number);
     }
 
     public void add(int index,int number){
