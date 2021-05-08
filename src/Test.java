@@ -6,5 +6,6 @@ public class Test {
         single.add(20);
         single.add(30);
         single.print();
+        System.out.println("Size: "+single.size());
     }
 }

@@ -3,6 +3,7 @@ public class Singly {
     //create first object
     private Node firstNode;
     private Node lastNode;
+    int c = 0;
 
     public  void add(int number){
         Node newnode = new Node(number);
@@ -33,13 +34,12 @@ public class Singly {
         Node currentNode = firstNode;
         if(firstNode == null){
             System.out.println("List of Empty");
-            return;
         }
         System.out.print("Singly linked list: [ ");
         while (currentNode != null){
-
             System.out.print(currentNode.number + " ");
             currentNode = currentNode.next;
+            c=c+1;
         }
         System.out.println("]");
 
@@ -47,11 +47,13 @@ public class Singly {
 
 
     public void clear(){
-
+        lastNode = null;
+        firstNode = null;
     }
 
     public int size(){
-        return 0;
+        return c;
+
     }
 
     public boolean contains(int number){
