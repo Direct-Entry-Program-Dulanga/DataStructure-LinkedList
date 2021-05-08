@@ -1,9 +1,20 @@
 public class Singly {
 
-    private Node sentiNode;
+    //create first object
+    private Node firstNode;
+    private Node lastNode;
 
     public  void add(int number){
-        Node node = new Node(number);
+        Node newnode = new Node(number);
+        if(firstNode==null){
+            firstNode = newnode;
+            lastNode = newnode;
+        }else{
+            lastNode.next = newnode;
+            lastNode = newnode;
+        }
+
+
     }
 
     public void add(int index,int number){
@@ -19,8 +30,22 @@ public class Singly {
     }
 
     public void print(){
+        Node currentNode = firstNode;
+        if(firstNode == null){
+            System.out.println("List of Empty");
+            return;
+        }
+        System.out.print("Singly linked list: [ ");
+        while (currentNode != null){
+
+            System.out.print(currentNode.number + " ");
+            currentNode = currentNode.next;
+        }
+        System.out.println("]");
 
     }
+
+
     public void clear(){
 
     }
