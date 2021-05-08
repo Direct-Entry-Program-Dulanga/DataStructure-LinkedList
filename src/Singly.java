@@ -4,6 +4,7 @@ public class Singly {
 
     public  void add(int number){
 
+
     }
 
     public void add(int index,int number){
