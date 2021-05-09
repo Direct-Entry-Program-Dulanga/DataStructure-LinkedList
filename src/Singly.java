@@ -24,9 +24,8 @@ public class Singly {
             throw new RuntimeException("Invalid linked exception");
         }
         for (int i = 0; i < size(); i++) {
-                if(i < index){
+                if(i <= index){
                     firstNode.next = newnode2;
-                }else if(i==index){
                     newnode2.next = lastNode;
                 }
         }
@@ -37,7 +36,7 @@ public class Singly {
 
     }
 
-    public int get(int undex){
+    public int get(int index){
         return 0;
     }
 
