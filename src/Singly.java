@@ -21,11 +21,12 @@ public class Singly {
     public void add(int index,int number){
         Node newnode2 = new Node(number);
         if(index > size() || index < 0){
-            throw new RuntimeException("Invalid Array exception");
+            throw new RuntimeException("Invalid linked exception");
         }
         for (int i = 0; i < size(); i++) {
-                if(i == index){
+                if(i < index){
                     firstNode.next = newnode2;
+                }else if(i==index){
                     newnode2.next = lastNode;
                 }
         }
