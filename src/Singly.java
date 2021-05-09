@@ -33,11 +33,27 @@ public class Singly {
     }
 
     public void remove(int index){
-
+        if(index >= size() || index< 0){
+            throw new RuntimeException("Invalid list index");
+        }
+        if (size() ==0){
+            clear();
+            return;
+        }
     }
 
     public int get(int index){
-        return 0;
+        int temp = 0;
+        if (index >= size() || index < 0){
+            throw new RuntimeException("Invalid index");
+        }
+        while(size() != index){
+            temp = firstNode.number;
+            System.out.println(temp);
+        }
+        return temp;
+        
+
     }
 
     public void print(){
